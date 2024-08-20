@@ -37,7 +37,7 @@ public class Tarefa {
     @Column(nullable = false)
     private boolean concluido;
 
-    public boolean getConcluido() {
+    public boolean isConcluido() {
         return concluido;
     }
 

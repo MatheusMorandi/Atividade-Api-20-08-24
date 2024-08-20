@@ -1,4 +1,4 @@
-@baseUrl = https://8080-matheusmora-aprendendoa-ycuhwb2apuc.ws-us115.gitpod.io
+@baseUrl = https://8080-matheusmora-atividadeap-hcyyn3fmqjj.ws-us115.gitpod.io
 
 ###
 GET {{baseUrl}}/tarefa
@@ -9,7 +9,7 @@ Content-Type: application/json
 
 {
     "descricao": "Kashimba",
-    "concluido": "TRUE"
+    "concluido": "FALSE"
 }
 
 ###
@@ -18,12 +18,12 @@ GET {{baseUrl}}/tarefa/2
 
 ###
 
-PUT {{baseUrl}}/tarefa/1
+PUT {{baseUrl}}/tarefa/2
 Content-Type: application/json
 
 {
     "descricao": "Jerso",
-    "concluido": "sim"
+    "concluido": "TRUE"
 }
 
 

@@ -60,15 +60,18 @@ public class TarefaController {
 
         if (resultado.isEmpty()){
 
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "tarefa Não Encontrado");
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Tarefa Não Encontrada");
 
         }
 
         if (novosDados.getDescricao().isEmpty()){
 
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Nome Inválido");
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Descrição Da Tarefa Inválida");
 
         };
+
+        resultado.get().setDescricao(novosDados.getDescricao());
+        resultado.get().setConcluido(novosDados.isConcluido());
 
         return tarefaRepo.save(resultado.get());
 
@@ -79,7 +82,7 @@ public class TarefaController {
 
         if (!tarefaRepo.existsById(id)){
 
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "tarefa Não Encontrado");
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Tarefa Não Encontrada");
 
         }
 
