@@ -25,21 +25,21 @@ public class TarefaController {
     private TarefaRepository tarefaRepo;
 
     @GetMapping
-    public Iterable<Tarefa> list() {        
+    public Iterable<Tarefa> getAll() {        
 
         return tarefaRepo.findAll();
 
     }
 
     @PostMapping
-    public Tarefa insert(@RequestBody Tarefa tarefa) {
+    public Tarefa post(@RequestBody Tarefa tarefa) {
 
         return tarefaRepo.save(tarefa);
 
     }
 
     @GetMapping("/{id}")
-    public Tarefa details(@PathVariable long id) {
+    public Tarefa getOne(@PathVariable long id) {
 
         Optional<Tarefa> resultado = tarefaRepo.findById(id);
 
@@ -71,6 +71,7 @@ public class TarefaController {
         };
 
         resultado.get().setDescricao(novosDados.getDescricao());
+        
         resultado.get().setConcluido(novosDados.isConcluido());
 
         return tarefaRepo.save(resultado.get());
