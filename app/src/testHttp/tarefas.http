@@ -1,10 +1,13 @@
 @baseUrl = https://8080-matheusmora-atividadeap-hcyyn3fmqjj.ws-us115.gitpod.io
 
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJBUEkgVGFyZWZhcyIsInN1YiI6ImFkbWluIiwiZXhwIjoxNzI1MzE0OTI0fQ.m5UFvnv-0ZPCuqQ8LlYF-L7Z0e6W-7trdhEIC18eA-E
 ###
 GET {{baseUrl}}/tarefa
+Authorization: Bearer {{token}}
 
 ###
 POST {{baseUrl}}/tarefa
+Authorization: Bearer {{token}}
 Content-Type: application/json
 
 {
