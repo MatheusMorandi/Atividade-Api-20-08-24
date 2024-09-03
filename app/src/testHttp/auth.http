@@ -1,4 +1,4 @@
-@baseUrl = https://8080-matheusmora-atividadeap-hcyyn3fmqjj.ws-us115.gitpod.io
+@baseUrl = https://8080-matheusmora-atividadeap-hcyyn3fmqjj.ws-us116.gitpod.io
 
 ###
 
@@ -7,7 +7,7 @@ Content-Type: application/json
 
 {
 
-    "nomeDeUsuario": "admin",
-    "senha": "admin"
+    "nomeDeUsuario": "user",
+    "senha": "user"
 
 }
